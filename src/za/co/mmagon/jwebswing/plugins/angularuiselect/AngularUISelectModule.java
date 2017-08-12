@@ -11,19 +11,19 @@ import za.co.mmagon.jwebswing.base.angular.modules.AngularModuleBase;
 class AngularUISelectModule extends AngularModuleBase
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    /*
-     * Constructs a new AngularUISelectModule
-     */
-    public AngularUISelectModule()
-    {
-        super("ui.select");
-    }
+	/*
+	 * Constructs a new AngularUISelectModule
+	 */
+	public AngularUISelectModule()
+	{
+		super("ui.select");
+	}
 
-    @Override
-    public String renderFunction()
-    {
-        return null;
-    }
+	@Override
+	public String renderFunction()
+	{
+		return null;
+	}
 }

@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-		"angular-ui-select": "*"
+    "angular-ui-select": "*"
   }
 }

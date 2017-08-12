@@ -20,16 +20,16 @@ import za.co.mmagon.jwebswing.plugins.angularuiselect.interfaces.AngularUISelect
  */
 public class AngularUISelectMatch extends Div implements AngularUISelectChildren
 {
-
-    private static final long serialVersionUID = 1L;
-
-    /*
-     * Constructs a new AngularUISelectMatch
-     */
-    public AngularUISelectMatch(String variableName, String placeHolder)
-    {
-        setTag("ui-select-match");
-        setText("{{" + variableName + "}}");
-        addAttribute(InputTextAttributes.PlaceHolder, placeHolder);
-    }
+	
+	private static final long serialVersionUID = 1L;
+	
+	/*
+	 * Constructs a new AngularUISelectMatch
+	 */
+	public AngularUISelectMatch(String variableName, String placeHolder)
+	{
+		setTag("ui-select-match");
+		setText("{{" + variableName + "}}");
+		addAttribute(InputTextAttributes.PlaceHolder, placeHolder);
+	}
 }
