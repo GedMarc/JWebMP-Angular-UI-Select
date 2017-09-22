@@ -25,19 +25,20 @@ enum AngularUISelectReferencePool implements ReferencePool
 	/**
 	 * A new AngularSlimScrollReferencePool
 	 */
-	private AngularUISelectReferencePool()
+	AngularUISelectReferencePool()
 	{
 	
 	}
+	
 	/**
 	 * A new AngularSlimScrollReferencePool with data
 	 */
-	private AngularUISelectReferencePool(String data)
+	AngularUISelectReferencePool(String data)
 	{
 	
 	}
 	
-	private AngularUISelectReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
+	AngularUISelectReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
 	{
 		this.javaScriptReference = javaScriptReference;
 		if (this.javaScriptReference != null)

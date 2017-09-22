@@ -9,18 +9,18 @@ import za.co.mmagon.jwebswing.Page;
  */
 public class AngularUISelectPageConfiguratorTest extends BaseTestClass
 {
-
+	
 	public AngularUISelectPageConfiguratorTest()
 	{
 	}
-
+	
 	@Test
 	public void testSomeMethod()
 	{
 		Page p = getInstance();
 		System.out.println(p.toString(0));
 	}
-
+	
 	@Test
 	public void testHtml()
 	{
@@ -31,5 +31,5 @@ public class AngularUISelectPageConfiguratorTest extends BaseTestClass
 		p.getBody().add(uis);
 		System.out.println(p.toString(0));
 	}
-
+	
 }
