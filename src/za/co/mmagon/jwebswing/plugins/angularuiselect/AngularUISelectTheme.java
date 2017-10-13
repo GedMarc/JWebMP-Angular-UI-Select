@@ -26,15 +26,6 @@ public enum AngularUISelectTheme
 	{
 	
 	}
-	
-	/**
-	 * A new AngularUISelectTheme with data
-	 */
-	private AngularUISelectTheme(String data)
-	{
-	
-	}
-	
 	/**
 	 * Returns the name or the data contained within
 	 *

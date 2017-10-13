@@ -7,6 +7,8 @@ import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 import za.co.mmagon.jwebswing.plugins.angularuiselect.interfaces.AngularUISelectChildren;
 
+import java.util.Objects;
+
 /**
  * Angular UI Sortable Helper
  *
@@ -91,7 +93,6 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 	public AngularUISelect setModel(String variableName)
 	{
 		bind(variableName);
-		//addAttribute(AngularUISelectAttributes.Multiple, variableName);
 		return this;
 	}
 	
@@ -277,5 +278,31 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 	{
 		addAttribute(GlobalAttributes.Title, title);
 		return this;
+	}
+	
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (!(o instanceof AngularUISelect))
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+		AngularUISelect that = (AngularUISelect) o;
+		return Objects.equals(selected, that.selected) &&
+				Objects.equals(availableChoices, that.availableChoices);
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		return Objects.hash(super.hashCode(), selected, availableChoices);
 	}
 }

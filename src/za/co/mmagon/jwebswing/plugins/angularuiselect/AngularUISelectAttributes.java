@@ -98,7 +98,7 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	 */
 	private AngularUISelectAttributes(String data)
 	{
-	
+		this.data = data;
 	}
 	
 	/**
@@ -122,13 +122,6 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	@Override
 	public boolean isKeyword()
 	{
-		if (this == Multiple || this == Tagging)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		return (this == Multiple || this == Tagging);
 	}
 }
