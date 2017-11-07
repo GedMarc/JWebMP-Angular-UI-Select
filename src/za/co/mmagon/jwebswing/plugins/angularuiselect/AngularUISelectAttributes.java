@@ -1,6 +1,7 @@
 package za.co.mmagon.jwebswing.plugins.angularuiselect;
 
 import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
+import za.co.mmagon.jwebswing.utilities.StaticStrings;
 
 /**
  * The added available angular attributes for the UI Select
@@ -88,7 +89,7 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	/**
 	 * A new AngularUIAttributes
 	 */
-	private AngularUISelectAttributes()
+	AngularUISelectAttributes()
 	{
 	
 	}
@@ -96,7 +97,7 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	/**
 	 * A new AngularUIAttributes with data
 	 */
-	private AngularUISelectAttributes(String data)
+	AngularUISelectAttributes(String data)
 	{
 		this.data = data;
 	}
@@ -111,11 +112,11 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	{
 		if (data != null && !data.isEmpty())
 		{
-			return data.replace('_', '-').toLowerCase();
+			return data.replace(StaticStrings.CHAR_UNDERSCORE, '-').toLowerCase();
 		}
 		else
 		{
-			return name().replace('_', '-').toLowerCase();
+			return name().replace(StaticStrings.CHAR_UNDERSCORE, '-').toLowerCase();
 		}
 	}
 	
