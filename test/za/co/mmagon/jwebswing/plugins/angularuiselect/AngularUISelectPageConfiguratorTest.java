@@ -22,6 +22,7 @@ public class AngularUISelectPageConfiguratorTest extends BaseTestClass
 	}
 	
 	@Test
+	@SuppressWarnings("unchecked")
 	public void testHtml()
 	{
 		Page p = getInstance();

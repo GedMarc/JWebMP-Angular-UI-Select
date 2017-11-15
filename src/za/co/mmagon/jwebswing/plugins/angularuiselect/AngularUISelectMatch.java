@@ -26,6 +26,7 @@ public class AngularUISelectMatch extends Div implements AngularUISelectChildren
 	/*
 	 * Constructs a new AngularUISelectMatch
 	 */
+	@SuppressWarnings("unchecked")
 	public AngularUISelectMatch(String variableName, String placeHolder)
 	{
 		setTag("ui-select-match");
