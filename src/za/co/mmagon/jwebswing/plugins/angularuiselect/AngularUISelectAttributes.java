@@ -3,6 +3,8 @@ package za.co.mmagon.jwebswing.plugins.angularuiselect;
 import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
 import za.co.mmagon.jwebswing.utilities.StaticStrings;
 
+import static za.co.mmagon.jwebswing.utilities.StaticStrings.CHAR_DASH;
+
 /**
  * The added available angular attributes for the UI Select
  *
@@ -85,15 +87,15 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	 * Any sub data
 	 */
 	private String data;
-	
+
 	/**
 	 * A new AngularUIAttributes
 	 */
 	AngularUISelectAttributes()
 	{
-	
+
 	}
-	
+
 	/**
 	 * A new AngularUIAttributes with data
 	 */
@@ -101,7 +103,7 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	{
 		this.data = data;
 	}
-	
+
 	/**
 	 * Returns the name or the data contained within
 	 *
@@ -112,14 +114,14 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	{
 		if (data != null && !data.isEmpty())
 		{
-			return data.replace(StaticStrings.CHAR_UNDERSCORE, '-').toLowerCase();
+			return data.replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH).toLowerCase();
 		}
 		else
 		{
-			return name().replace(StaticStrings.CHAR_UNDERSCORE, '-').toLowerCase();
+			return name().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH).toLowerCase();
 		}
 	}
-	
+
 	@Override
 	public boolean isKeyword()
 	{
