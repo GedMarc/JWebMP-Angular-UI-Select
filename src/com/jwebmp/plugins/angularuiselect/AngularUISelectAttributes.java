@@ -1,9 +1,26 @@
-package za.co.mmagon.jwebswing.plugins.angularuiselect;
+/*
+ * Copyright (C) 2017 Marc Magon
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
-import za.co.mmagon.jwebswing.base.html.interfaces.AttributeDefinitions;
-import za.co.mmagon.jwebswing.utilities.StaticStrings;
+package com.jwebmp.plugins.angularuiselect;
 
-import static za.co.mmagon.jwebswing.utilities.StaticStrings.CHAR_DASH;
+import com.jwebmp.base.html.interfaces.AttributeDefinitions;
+import com.jwebmp.utilities.StaticStrings;
+
+import static com.jwebmp.utilities.StaticStrings.CHAR_DASH;
 
 /**
  * The added available angular attributes for the UI Select
@@ -11,7 +28,8 @@ import static za.co.mmagon.jwebswing.utilities.StaticStrings.CHAR_DASH;
  * @author Marc Magon
  * @since 12 Jun 2017
  */
-public enum AngularUISelectAttributes implements AttributeDefinitions
+public enum AngularUISelectAttributes
+		implements AttributeDefinitions
 {
 	/**
 	 * Closes a multi-select upon selection
@@ -42,12 +60,14 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	 */
 	Theme,
 	/**
-	 * Enable tagging mode (add new items on the fly). Accepts a string which is a scope function. If your model is an array of objects, this string is required. The function will be passed the new
+	 * Enable tagging mode (add new items on the fly). Accepts a string which is a scope function. If your model is an array of objects, this string is required. The function will
+	 * be passed the new
 	 * item as a string and should return an object which is the transformed value to be pushed to the items array.
 	 */
 	Tagging,
 	/**
-	 * Set a label for tags that appear in the dropdown. Expects a string or false. If false, then tagging happens without new items appearing in the dropdown. If empty or undeclared, tagging-label
+	 * Set a label for tags that appear in the dropdown. Expects a string or false. If false, then tagging happens without new items appearing in the dropdown. If empty or
+	 * undeclared, tagging-label
 	 * defaults to (new)
 	 */
 	Tagging_Label,
@@ -114,11 +134,13 @@ public enum AngularUISelectAttributes implements AttributeDefinitions
 	{
 		if (data != null && !data.isEmpty())
 		{
-			return data.replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH).toLowerCase();
+			return data.replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH)
+			           .toLowerCase();
 		}
 		else
 		{
-			return name().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH).toLowerCase();
+			return name().replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH)
+			             .toLowerCase();
 		}
 	}
 

@@ -1,10 +1,10 @@
-package za.co.mmagon.jwebswing.plugins.angularuiselect;
+package com.jwebmp.plugins.angularuiselect;
 
-import za.co.mmagon.jwebswing.Page;
-import za.co.mmagon.jwebswing.PageConfigurator;
-import za.co.mmagon.jwebswing.base.angular.AngularPageConfigurator;
-import za.co.mmagon.jwebswing.plugins.PluginInformation;
-import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
+import com.jwebmp.Page;
+import com.jwebmp.PageConfigurator;
+import com.jwebmp.base.angular.AngularPageConfigurator;
+import com.jwebmp.plugins.PluginInformation;
+import com.jwebmp.plugins.jquery.JQueryPageConfigurator;
 
 /**
  * The Angular UI Select Configurator
@@ -24,8 +24,8 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://angular-ui.github.io/ui-select/#documenation",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularUISelect.jar/download"
-) class AngularUISelectPageConfigurator extends PageConfigurator
+		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularUISelect.jar/download") class AngularUISelectPageConfigurator
+		extends PageConfigurator
 {
 
 	private static final long serialVersionUID = 1L;
@@ -46,10 +46,15 @@ import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 			JQueryPageConfigurator.setRequired(true);
 			AngularPageConfigurator.setRequired(true);
 
-			page.getBody().addJavaScriptReference(AngularUISelectReferencePool.AngularUISelect.getJavaScriptReference());
+			page.getBody()
+			    .addJavaScriptReference(AngularUISelectReferencePool.AngularUISelect.getJavaScriptReference());
 
-			page.getAngular().getAngularModules().add(new AngularUISelectModule());
-			page.getAngular().getAngularControllers().add(new AngularUISelectDefaultConfigController());
+			page.getAngular()
+			    .getAngularModules()
+			    .add(new AngularUISelectModule());
+			page.getAngular()
+			    .getAngularControllers()
+			    .add(new AngularUISelectDefaultConfigController());
 		}
 		return page;
 	}

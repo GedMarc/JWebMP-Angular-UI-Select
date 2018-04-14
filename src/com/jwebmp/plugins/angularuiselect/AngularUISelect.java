@@ -1,11 +1,28 @@
-package za.co.mmagon.jwebswing.plugins.angularuiselect;
+/*
+ * Copyright (C) 2017 Marc Magon
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
-import za.co.mmagon.jwebswing.base.html.Div;
-import za.co.mmagon.jwebswing.base.html.attributes.GlobalAttributes;
-import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
-import za.co.mmagon.jwebswing.base.html.interfaces.events.GlobalEvents;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
-import za.co.mmagon.jwebswing.plugins.angularuiselect.interfaces.AngularUISelectChildren;
+package com.jwebmp.plugins.angularuiselect;
+
+import com.jwebmp.base.html.Div;
+import com.jwebmp.base.html.attributes.GlobalAttributes;
+import com.jwebmp.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.base.html.interfaces.events.GlobalEvents;
+import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.plugins.angularuiselect.interfaces.AngularUISelectChildren;
 
 import java.util.Objects;
 
@@ -15,13 +32,15 @@ import java.util.Objects;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-@ComponentInformation(name = "Angular UI Select", description = "A native AngularJS implementation of Select2/Selectize by the AngularUI Team",
+@ComponentInformation(name = "Angular UI Select",
+		description = "A native AngularJS implementation of Select2/Selectize by the AngularUI Team",
 		url = "https://angular-ui.github.io/ui-select")
-public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelectAttributes, GlobalFeatures, GlobalEvents, AngularUISelect>
+public class AngularUISelect
+		extends Div<AngularUISelectChildren, AngularUISelectAttributes, GlobalFeatures, GlobalEvents, AngularUISelect>
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
 	 * The current selected match item display
 	 */
@@ -30,7 +49,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 	 * The children for the selector display
 	 */
 	private AngularUISelectChoices availableChoices;
-	
+
 	/*
 	 * Constructs a new AngularUISelect
 	 */
@@ -39,11 +58,11 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		setTag("ui-select");
 		selected = new AngularUISelectMatch(variableName, placeHolder);
 		availableChoices = new AngularUISelectChoices(itemRepeatString, componentDisplay);
-		
+
 		add(selected);
 		add(availableChoices);
 	}
-	
+
 	/**
 	 * Closes a multi-select upon selection
 	 *
@@ -56,7 +75,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Close_On_Select, closeOnSelect);
 		return this;
 	}
-	
+
 	/**
 	 * Appends the dropdown to the box vs relative
 	 *
@@ -69,7 +88,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Append_To_Body, appendToBody);
 		return this;
 	}
-	
+
 	/**
 	 * Control is disabled
 	 *
@@ -82,7 +101,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Disabled, disabled);
 		return this;
 	}
-	
+
 	/**
 	 * Result is bound to variable
 	 *
@@ -95,7 +114,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		bind(variableName);
 		return this;
 	}
-	
+
 	/**
 	 * Search is enabled
 	 *
@@ -108,7 +127,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Search_Enabled, searchEnabled);
 		return this;
 	}
-	
+
 	/**
 	 * Clears the search box after selecting an option
 	 *
@@ -121,7 +140,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Reset_Search_Input, resetSearchInput);
 		return this;
 	}
-	
+
 	/**
 	 * Sets the specified theme
 	 *
@@ -134,9 +153,10 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Theme, theme.toString());
 		return this;
 	}
-	
+
 	/**
-	 * Enable tagging mode (add new items on the fly). Accepts a string which is a scope function. If your model is an array of objects, this string is required. The function will be passed the new
+	 * Enable tagging mode (add new items on the fly). Accepts a string which is a scope function. If your model is an array of objects, this string is required. The function will
+	 * be passed the new
 	 * item as a string and should return an object which is the transformed value to be pushed to the items array.
 	 *
 	 * @param tagging
@@ -148,9 +168,10 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Tagging, tagging);
 		return this;
 	}
-	
+
 	/**
-	 * Set a label for tags that appear in the dropdown. Expects a string or  FALSE . If  FALSE , then tagging happens without new items appearing in the dropdown. If empty or undeclared, 
+	 * Set a label for tags that appear in the dropdown. Expects a string or  FALSE . If  FALSE , then tagging happens without new items appearing in the dropdown. If empty or
+	 * undeclared, 
 	 * tagging-label defaults to  (new)
 	 *
 	 * @param tagglingLabel
@@ -162,7 +183,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Tagging_Label, tagglingLabel);
 		return this;
 	}
-	
+
 	/**
 	 * Specify keyboard keys that will trigger creation of a new tag. Multiple keys can be separated by a pipe `
 	 *
@@ -175,7 +196,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Tagging_Tokens, taggingTokens);
 		return this;
 	}
-	
+
 	/**
 	 * Automatically get focus when loaded.
 	 *
@@ -188,7 +209,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.AutoFocus, autoFocus);
 		return this;
 	}
-	
+
 	/**
 	 * Set to true to skip the focusser after selecting an item.
 	 *
@@ -201,7 +222,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Skip_Focusser, skipFocusser);
 		return this;
 	}
-	
+
 	/**
 	 * Accepts a string which is a scope function. The function will be passed the pasted text as a string.
 	 *
@@ -214,7 +235,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Paste, closeOnSelect);
 		return this;
 	}
-	
+
 	/**
 	 * Limits the number of selected items in multiple select mode
 	 *
@@ -227,7 +248,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Limit, closeOnSelect);
 		return this;
 	}
-	
+
 	/**
 	 * Sets the spinner enabled when using the refresh function
 	 *
@@ -240,7 +261,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Spinner_Enabled, spinnerEnabled);
 		return this;
 	}
-	
+
 	/**
 	 * Sets the spinner css class. Default it will have its own style but can be overridden using this.
 	 *
@@ -253,7 +274,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Spinner_Class, spinnerClass);
 		return this;
 	}
-	
+
 	/**
 	 * Sets the input  id  so it can be labelled
 	 *
@@ -266,7 +287,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(AngularUISelectAttributes.Input_Id, inputId);
 		return this;
 	}
-	
+
 	/**
 	 * Sets the title for the select drop down
 	 *
@@ -279,7 +300,7 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 		addAttribute(GlobalAttributes.Title, title);
 		return this;
 	}
-	
+
 	@Override
 	public boolean equals(Object o)
 	{
@@ -296,10 +317,9 @@ public class AngularUISelect extends Div<AngularUISelectChildren, AngularUISelec
 			return false;
 		}
 		AngularUISelect that = (AngularUISelect) o;
-		return Objects.equals(selected, that.selected) &&
-				Objects.equals(availableChoices, that.availableChoices);
+		return Objects.equals(selected, that.selected) && Objects.equals(availableChoices, that.availableChoices);
 	}
-	
+
 	@Override
 	public int hashCode()
 	{
