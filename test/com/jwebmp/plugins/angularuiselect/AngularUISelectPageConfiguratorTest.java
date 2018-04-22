@@ -17,7 +17,6 @@
 
 package com.jwebmp.plugins.angularuiselect;
 
-import com.jwebmp.BaseTestClass;
 import com.jwebmp.Page;
 import org.junit.jupiter.api.Test;
 
@@ -25,7 +24,7 @@ import org.junit.jupiter.api.Test;
  * @author Marc Magon
  */
 public class AngularUISelectPageConfiguratorTest
-		extends BaseTestClass
+
 {
 
 	public AngularUISelectPageConfiguratorTest()
@@ -35,7 +34,7 @@ public class AngularUISelectPageConfiguratorTest
 	@Test
 	public void testSomeMethod()
 	{
-		Page p = getInstance();
+		Page p = new Page();
 		System.out.println(p.toString(0));
 	}
 
@@ -43,7 +42,7 @@ public class AngularUISelectPageConfiguratorTest
 	@SuppressWarnings("unchecked")
 	public void testHtml()
 	{
-		Page p = getInstance();
+		Page p = new Page();
 		AngularUISelect uis = new AngularUISelect("variable.name", "Please pick one...", "itemName in variable.name", "$item");
 		uis.setLimit(5);
 		uis.setInputId("input");
