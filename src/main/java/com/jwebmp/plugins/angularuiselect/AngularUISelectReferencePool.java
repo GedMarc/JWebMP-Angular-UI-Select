@@ -28,7 +28,8 @@ import com.jwebmp.base.servlets.interfaces.ReferencePool;
  * @author Marc Magon
  * @since 09 Jun 2017
  */
-enum AngularUISelectReferencePool implements ReferencePool
+enum AngularUISelectReferencePool
+		implements ReferencePool
 {
 	AngularUISelect(new JavascriptReference("AngularUISelect", 1.6, "bower_components/angular-ui-select/dist/select.js"),
 	                new CSSReference("AngularUISelect", 1.6, "bower_components/angular-ui-select/dist/select.css"));
