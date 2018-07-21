@@ -17,8 +17,8 @@
 
 package com.jwebmp.plugins.angularuiselect;
 
-import com.jwebmp.base.html.Div;
-import com.jwebmp.base.html.attributes.InputTextAttributes;
+import com.jwebmp.core.base.html.Div;
+import com.jwebmp.core.base.html.attributes.InputTextAttributes;
 import com.jwebmp.plugins.angularuiselect.interfaces.AngularUISelectChildren;
 
 /**

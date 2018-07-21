@@ -17,10 +17,10 @@
 
 package com.jwebmp.plugins.angularuiselect;
 
-import com.jwebmp.base.html.interfaces.AttributeDefinitions;
-import com.jwebmp.utilities.StaticStrings;
+import com.jwebmp.core.base.html.interfaces.AttributeDefinitions;
+import com.jwebmp.core.utilities.StaticStrings;
 
-import static com.jwebmp.utilities.StaticStrings.*;
+import static com.jwebmp.core.utilities.StaticStrings.*;
 
 /**
  * The added available angular attributes for the UI Select

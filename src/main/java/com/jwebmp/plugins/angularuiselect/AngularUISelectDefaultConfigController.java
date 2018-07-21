@@ -17,8 +17,8 @@
 
 package com.jwebmp.plugins.angularuiselect;
 
-import com.jwebmp.FileTemplates;
-import com.jwebmp.base.angular.controllers.AngularControllerBase;
+import com.jwebmp.core.FileTemplates;
+import com.jwebmp.core.base.angular.controllers.AngularControllerBase;
 
 /**
  * @author Marc Magon
