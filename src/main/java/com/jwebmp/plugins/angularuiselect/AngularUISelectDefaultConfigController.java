@@ -18,14 +18,15 @@
 package com.jwebmp.plugins.angularuiselect;
 
 import com.jwebmp.core.FileTemplates;
-import com.jwebmp.core.base.angular.controllers.AngularControllerBase;
+import com.jwebmp.core.base.angular.services.IAngularController;
 
 /**
  * @author Marc Magon
  * @since 12 Jun 2017
  */
 public class AngularUISelectDefaultConfigController
-		extends AngularControllerBase
+		extends com.jwebmp.core.base.angular.AngularReferenceBase
+		implements IAngularController<AngularUISelectDefaultConfigController>
 {
 
 	private static final long serialVersionUID = 1L;
