@@ -14,4 +14,7 @@ module com.jwebmp.plugins.angularuiselect {
 	provides IPageConfigurator with AngularUISelectPageConfigurator;
 	provides IAngularModule with AngularUISelectModule;
 	provides IAngularController with AngularUISelectDefaultConfigController;
+
+	opens com.jwebmp.plugins.angularuiselect to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.angularuiselect.interfaces to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
