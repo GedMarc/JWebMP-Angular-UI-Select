@@ -17,14 +17,15 @@
 
 package com.jwebmp.plugins.angularuiselect.interfaces;
 
-import com.jwebmp.core.base.html.interfaces.GlobalChildren;
+import com.jwebmp.core.base.ComponentBase;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 /**
  * @author Marc Magon
  * @since 12 Jun 2017
  */
-public interface AngularUISelectChildren
-		extends GlobalChildren
+public interface AngularUISelectChildren<C extends IComponentHierarchyBase, J extends ComponentBase>
+		extends IComponentHierarchyBase<C, J>
 {
 
 }
