@@ -17,7 +17,8 @@
 
 package com.jwebmp.plugins.angularuiselect;
 
-import com.jwebmp.core.base.html.Div;
+import com.jwebmp.core.base.html.DivSimple;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.plugins.angularuiselect.interfaces.AngularUISelectChildren;
 
 /**
@@ -27,9 +28,9 @@ import com.jwebmp.plugins.angularuiselect.interfaces.AngularUISelectChildren;
  * @author Marc Magon
  * @since 12 Jun 2017
  */
-public class AngularUISelectChoices
-		extends Div
-		implements AngularUISelectChildren
+public class AngularUISelectChoices<J extends AngularUISelectChoices<J>>
+		extends DivSimple<J>
+		implements AngularUISelectChildren<IComponentHierarchyBase, J>
 {
 
 	private static final long serialVersionUID = 1L;
