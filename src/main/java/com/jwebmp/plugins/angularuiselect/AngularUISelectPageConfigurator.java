@@ -30,6 +30,10 @@ import javax.validation.constraints.NotNull;
 public class AngularUISelectPageConfigurator
 		implements IPageConfigurator
 {
+	/**
+	 * If this configurator is enabled
+	 */
+	private static boolean enabled = true;
 
 	/*
 	 * Constructs a new AngularUISelectPageConfigurator
@@ -37,6 +41,31 @@ public class AngularUISelectPageConfigurator
 	public AngularUISelectPageConfigurator()
 	{
 		//Nothing needed
+	}
+
+	/**
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static boolean isEnabled()
+	{
+		return AngularUISelectPageConfigurator.enabled;
+	}
+
+	/**
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static void setEnabled(boolean mustEnable)
+	{
+		AngularUISelectPageConfigurator.enabled = mustEnable;
 	}
 
 	@NotNull
@@ -52,5 +81,11 @@ public class AngularUISelectPageConfigurator
 			    .addJavaScriptReference(AngularUISelectReferencePool.AngularUISelect.getJavaScriptReference());
 		}
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return AngularUISelectPageConfigurator.enabled;
 	}
 }
