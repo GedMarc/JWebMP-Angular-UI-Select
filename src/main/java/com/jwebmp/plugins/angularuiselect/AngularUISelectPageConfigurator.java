@@ -21,14 +21,14 @@ import javax.validation.constraints.NotNull;
 		pluginCategories = "angular,select, dropdown, bootstrap, select2, selectizer, ui,web ui, framework",
 		pluginSubtitle = "A native AngularJS implementation of Select2/Selectize by the AngularUI Team",
 		pluginSourceUrl = "https://github.com/angular-ui/ui-select",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-Angular-UI-Select/wiki",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-Angular-UI-Select",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-Angular-UI-Select/wiki",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-Angular-UI-Select",
 		pluginIconUrl = "",
 		pluginIconImageUrl = "",
 		pluginOriginalHomepage = "https://angular-ui.github.io/ui-select/#documenation",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/AngularUISelect.jar/download")
 public class AngularUISelectPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<AngularUISelectPageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
