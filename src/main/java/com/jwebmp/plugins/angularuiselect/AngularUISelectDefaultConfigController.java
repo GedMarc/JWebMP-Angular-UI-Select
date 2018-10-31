@@ -29,7 +29,6 @@ public class AngularUISelectDefaultConfigController
 		implements IAngularController<AngularUISelectDefaultConfigController>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/*
 	 * Constructs a new AngularUISelectDefaultConfigController

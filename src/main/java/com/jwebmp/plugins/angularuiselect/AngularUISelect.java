@@ -39,7 +39,6 @@ public class AngularUISelect
 		extends Div<AngularUISelectChildren, AngularUISelectAttributes, GlobalFeatures, GlobalEvents, AngularUISelect>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/**
 	 * The current selected match item display
@@ -302,6 +301,12 @@ public class AngularUISelect
 	}
 
 	@Override
+	public int hashCode()
+	{
+		return Objects.hash(super.hashCode(), selected, availableChoices);
+	}
+
+	@Override
 	public boolean equals(Object o)
 	{
 		if (this == o)
@@ -318,11 +323,5 @@ public class AngularUISelect
 		}
 		AngularUISelect that = (AngularUISelect) o;
 		return Objects.equals(selected, that.selected) && Objects.equals(availableChoices, that.availableChoices);
-	}
-
-	@Override
-	public int hashCode()
-	{
-		return Objects.hash(super.hashCode(), selected, availableChoices);
 	}
 }

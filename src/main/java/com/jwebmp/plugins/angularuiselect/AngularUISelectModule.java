@@ -31,7 +31,6 @@ public class AngularUISelectModule
 		implements IAngularModule<AngularUISelectModule>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/*
 	 * Constructs a new AngularUISelectModule

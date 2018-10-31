@@ -33,7 +33,6 @@ public class AngularUISelectChoices<J extends AngularUISelectChoices<J>>
 		implements AngularUISelectChildren<IComponentHierarchyBase, J>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/*
 	 * Constructs a new AngularUISelectMatch
