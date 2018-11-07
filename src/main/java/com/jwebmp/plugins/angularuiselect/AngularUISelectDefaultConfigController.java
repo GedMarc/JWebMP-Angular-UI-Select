@@ -44,4 +44,15 @@ public class AngularUISelectDefaultConfigController
 		StringBuilder controllerOutput = FileTemplates.getFileTemplate(AngularUISelectDefaultConfigController.class, "angularuiselectdefaults");
 		return controllerOutput.toString();
 	}
+
+	/**
+	 * If this page configurator is enabled
+	 *
+	 * @return if the configuration must run
+	 */
+	@Override
+	public boolean enabled()
+	{
+		return AngularUISelectPageConfigurator.isEnabled();
+	}
 }
