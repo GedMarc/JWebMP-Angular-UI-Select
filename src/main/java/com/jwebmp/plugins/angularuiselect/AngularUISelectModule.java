@@ -18,7 +18,6 @@
 package com.jwebmp.plugins.angularuiselect;
 
 import com.jwebmp.core.base.angular.modules.AngularModuleBase;
-import com.jwebmp.core.base.angular.services.IAngularModule;
 
 /**
  * The module getting loaded into angular
@@ -27,11 +26,8 @@ import com.jwebmp.core.base.angular.services.IAngularModule;
  * @since 08 Jun 2017
  */
 public class AngularUISelectModule
-		extends AngularModuleBase
-		implements IAngularModule<AngularUISelectModule>
+		extends AngularModuleBase<AngularUISelectModule>
 {
-
-
 	/*
 	 * Constructs a new AngularUISelectModule
 	 */
